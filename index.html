@@ -5,18 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="data/index.css">
     <script src="data/index.js" defer></script>
-    <link rel="icon" href="data/smol.ico">
-    <title>SkillforALL</title>
+    <link rel="icon" href="data/ico.ico">
+    <title>SKILL FOR ALLL</title>
 </head>
-<body>
+<body id="body">
     <header>
-        <div class="header-container">
-
+        <div class="header-container barrier">
+            <div class="logo" onclick="returnToHome()"></div>
+            <div class="tabs-container">
+                <div class="tabs">
+                    <li data-tab-target="#home" class="tab active">HOME</li>
+                    <li data-tab-target="#about" class="tab">ABOUT</li>
+                    <li data-tab-target="#view-all" class="tab">VIEW ALL LESSONS</li>
+                </div>
+                <div class="account-container">
+                    <div class="account-img"></div>
+                    <div class="account-pop-out">
+                        <li data-tab-target="#profile" >PROFILE</li>
+                        <li data-tab-target="#view-all" >VIEW ALL LESSONS</li>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
-    <section>
+    <section data-tab-content id="home">
         <div class="section-container">
-            
+        </div>
+    </section>
+    <section data-tab-content id="about">
+        <div class="section-container">
+        </div>
+    </section>
+    <section data-tab-content id="view-all">
+        <div class="section-container">
+        </div>
+    </section>
+    <section data-tab-content id="profile">
+        <div class="section-container">
         </div>
     </section>
 </body>
