@@ -117,7 +117,7 @@ header {
                         color: white;
                         background-color: #f10000;
                         border-width: 2px;
-                        transform: translateX(1000px);
+                        transform: translateY(-1000px);
                     }
                         .one {
                             transition: .5s;
@@ -130,7 +130,7 @@ header {
                             border-left-style: solid;
                         }
                         .showshit .pop-tags {
-                            transform: translateX(0px);
+                            transform: translateY(0px);
                         }
                         .bline {
                             transition: .5s;
@@ -144,4 +144,7 @@ header {
 }
 .active[data-tab-content] {
     display: block;
+}
+.section {
+    position: relative;
 }
