@@ -14,6 +14,7 @@ var bg = document.getElementById("body");
         const target = document.querySelector(tab.dataset.tabTarget)
         tabContents.forEach(tabContent => {
             tabContent.classList.remove('ac');
+            tabContent.classList.remove('ab');
             setTimeout(() => {
                 tabContent.classList.remove('active');
             }, 100);
@@ -29,6 +30,9 @@ var bg = document.getElementById("body");
         setTimeout(() => {
             target.classList.add('ac');
         }, 300);
+        setTimeout(() => {
+            target.classList.add('ab');
+        }, 500);
     }
 
     tabs.forEach(tab => {
@@ -52,14 +56,19 @@ var bg = document.getElementById("body");
         bg.className = "";
         bg.classList.add("home");
     }
+var dropdown = document.getElementById("dropdown");
+var accountLine = document.getElementById("account-line");
+var profilePic = document.getElementById("profile-pic");
     function toggleDropdown() {
-        var dropdown = document.getElementById("dropdown");
-        var accountLine = document.getElementById("account-line");
-        var profilePic = document.getElementById("profile-pic");
         dropdown.classList.toggle("showshit");
         accountLine.classList.toggle("bline");
         profilePic.classList.toggle("blank");
     }
+        function resetDropdown() {
+            dropdown.classList.remove('showshit');
+            accountLine.classList.remove('bline');
+            profilePic.classList.remove('blank')
+        }
     function bghome() {
         bg.className = "";
         bg.classList.add("home");
