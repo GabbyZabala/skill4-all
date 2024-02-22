@@ -116,6 +116,10 @@ header {
                     border-left-style: solid;
                     border-color: transparent;
                 }
+                    .account-pop_out .active {
+                        background-color: #104400;
+                        color: white;
+                    }
                     .pop-tags { 
                         text-align: center;
                         padding-top: 5px;

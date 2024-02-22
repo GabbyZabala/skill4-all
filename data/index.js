@@ -32,7 +32,7 @@ var bg = document.getElementById("body");
         }, 300);
         setTimeout(() => {
             target.classList.add('ab');
-        }, 500);
+        }, 1750);
     }
 
     tabs.forEach(tab => {
