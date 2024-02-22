@@ -8,12 +8,16 @@ var bg = document.getElementById("body");
         const target = document.querySelector(tab.dataset.tabTarget)
         tabContents.forEach(tabContent => {
             tabContent.classList.remove('active')
+            tabContent.classList.remove('ac')
         })
         tabs.forEach(tab => {
             tab.classList.remove('active')
         })
         tab.classList.add('active')
         target.classList.add('active')
+        setTimeout(() => {
+            target.classList.add('ac');
+        }, 100);
     }
 
     tabs.forEach(tab => {
