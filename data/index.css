@@ -73,6 +73,7 @@ header {
                     }
             .account-container {
                 position: relative;
+                padding-left: 10px;
                 display: flex;
                     justify-content: center;
                     align-items: center;
@@ -180,13 +181,12 @@ section {
                     transform: translateY(1000%);
                 }
                 .home-title {
-                    font-size: 80px;
+                    font-size: 3vw;
                     text-align: center;
-                    color: #134005;
+                    color: #104400;
                     transform: translateY(1000%);
                 }
                 .home-subtext {
-                    font-size: 25px;
                     width: 60%;
                     text-align: center;
                     transform: translateY(1000%);
@@ -194,3 +194,52 @@ section {
         .ac .section-container .home-info-container .home-img, .ac .section-container .home-info-container .home-title, .ac .section-container .home-info-container .home-subtext{
             transform: translateY(0);
         }
+        .about-container {
+            display: flex;
+                justify-content: center;
+                align-items: center;
+            min-height: 600px;
+            overflow-x: hidden;
+        }
+            .about-about {
+                height: 95%;
+                width: 95%;
+                display: grid;
+                    grid-template-columns: 50% 50%;
+                    grid-template-rows: 100%;
+                    grid-template-areas: "left right";
+            }
+                .about-image-container {
+                    transform: translateX(-500%);
+                    grid-area: left;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                }
+                    .about-image-area {
+                        height: 70%;
+                        display: flex;
+                            align-items: center;
+                            gap: 20px;
+                    }
+                    .about-img {
+                        width: 250px;
+                        height: 350px;
+                        background-color: blue;
+                    }
+                        .o1 {
+                            transform: translateY(-50px);
+                        }
+                        .o2 {
+                            transform: translatey(50px);
+                        }
+                .about-word-container {
+                    transform: translateX(500%);
+                    grid-area: right;
+                    background-color: blue;
+                }
+        .ac .section-container .about-container .about-about .about-image-container, .ac .section-container .about-container .about-about .about-word-container{
+            transform: translateX(0);
+        }
+
+

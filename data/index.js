@@ -2,22 +2,33 @@ const tabs = document.querySelectorAll('[data-tab-target]')
 const tabContents = document.querySelectorAll('[data-tab-content]')
 const logo = document.querySelector('.logo');
 logo.addEventListener('click', returnToHome);
+
+var hometimer = document.getElementById("home")
+    setTimeout(() => {
+        hometimer.classList.add('ac');
+    }, 100);
 var bg = document.getElementById("body");
     bg.className = "home";
+
     function handleTabClick(tab) {
         const target = document.querySelector(tab.dataset.tabTarget)
         tabContents.forEach(tabContent => {
-            tabContent.classList.remove('active')
-            tabContent.classList.remove('ac')
-        })
+            tabContent.classList.remove('ac');
+            setTimeout(() => {
+                tabContent.classList.remove('active');
+            }, 100);
+            
+        });
         tabs.forEach(tab => {
             tab.classList.remove('active')
-        })
-        tab.classList.add('active')
-        target.classList.add('active')
+        });
+        tab.classList.add('active');
+        setTimeout(() => {
+            target.classList.add('active');
+        }, 100); 
         setTimeout(() => {
             target.classList.add('ac');
-        }, 100);
+        }, 300);
     }
 
     tabs.forEach(tab => {
@@ -31,10 +42,13 @@ var bg = document.getElementById("body");
             tab.classList.remove('active');
         });
         tabContents.forEach(tabContent => {
-            tabContent.classList.remove('active');
+            tabContent.classList.remove('active', 'ac');
         });
         homeTab.classList.add('active');
         homeSection.classList.add('active');
+        setTimeout(() => {
+            homeSection.classList.add('ac');
+        }, 300);
         bg.className = "";
         bg.classList.add("home");
     }
