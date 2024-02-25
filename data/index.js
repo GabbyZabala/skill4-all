@@ -46,13 +46,20 @@ var bg = document.getElementById("body");
             tab.classList.remove('active');
         });
         tabContents.forEach(tabContent => {
-            tabContent.classList.remove('active', 'ac');
+            tabContent.classList.remove('ac');
+            tabContent.classList.remove('ab');
+            setTimeout(() => {
+                tabContent.classList.remove('active');
+            }, 300);
         });
-        homeTab.classList.add('active');
-        homeSection.classList.add('active');
+        
         setTimeout(() => {
-            homeSection.classList.add('ac');
+            homeTab.classList.add('active');
+            homeSection.classList.add('active');
         }, 300);
+        setTimeout(() => {
+            homeSection.classList.add('ac'); 
+        }, 400);
         bg.className = "";
         bg.classList.add("home");
     }
@@ -69,15 +76,89 @@ var profilePic = document.getElementById("profile-pic");
             accountLine.classList.remove('bline');
             profilePic.classList.remove('blank')
         }
+var intel = document.getElementById("intel-container");
+var vtitle = document.getElementById("view-title");
+var vback = document.getElementById("view-reset");
+var icon1 = document.getElementById('icon1');
+var icon2 = document.getElementById('icon2');
+var icon3 = document.getElementById('icon3');
     function bghome() {
         bg.className = "";
         bg.classList.add("home");
+        intel.classList.add('sets');
+        vtitle.classList.remove('sets');
+        vback.classList.add('sets');
+        icon1.className = "view-icon-container";
+        icon2.className = "view-icon-container";
+        icon3.className = "view-icon-container";
     }
     function bgabout() {
         bg.className = "";
         bg.classList.add('about');
+        intel.classList.add('sets');
+        vtitle.classList.remove('sets');
+        vback.classList.add('sets');
+        icon1.className = "view-icon-container";
+        icon2.className = "view-icon-container";
+        icon3.className = "view-icon-container";
     }
     function bgview() {
         bg.className = "";
         bg.classList.add('view');
+        intel.classList.add('sets');
+        vtitle.classList.remove('sets');
+        vback.classList.add('sets');
+        icon1.className = "view-icon-container";
+        icon2.className = "view-icon-container";
+        icon3.className = "view-icon-container";
+    }
+const vicon = document.querySelectorAll('[data-icon-protocol]');
+const vselected = document.querySelectorAll('[data-protocol]');
+var viewContainer = document.getElementById('view-all');
+function viewChoice(view) {
+    const target = document.querySelector(view.dataset.iconProtocol);
+    vselected.forEach(selected => {
+        selected.classList.remove('selected');
+    });
+    vicon.forEach(icon => {
+        if (icon !== view) {
+            icon.classList.add('sets');
+            icon.classList.remove('selected-icon');
+        } else {
+            icon.classList.remove('sets');
+            icon.classList.add('selected-icon');
+        }
+    });
+    bg.className = "home";
+    target.classList.add('selected');
+        viewContainer.classList.remove('ac')
+    setTimeout(() => {
+        intel.classList.remove('sets');
+    }, 500);
+    setTimeout(() => {
+        vtitle.classList.add('sets');
+        vback.classList.remove('sets')
+        viewContainer.classList.add('ac')
+    }, 600);
+}
+
+      
+    vicon.forEach(view => {
+        view.addEventListener('click', () => viewChoice(view));
+    });
+var backbutton = document.getElementById('view-reset');
+var tutorial = document.getElementById('tutorial');
+var technique = document.getElementById('technique');
+var example = document.getElementById('example');
+    function resetView() {
+        bg.className = "view";
+        intel.classList.add('sets');
+        vtitle.classList.remove('sets');
+        vback.classList.add('sets');
+        tutorial.className = "view-article-input";
+        technique.className = "view-article-input";
+        example.className = "view-article-input";
+        icon1.className = "view-icon-container";
+        icon2.className = "view-icon-container";
+        icon3.className = "view-icon-container";
     }

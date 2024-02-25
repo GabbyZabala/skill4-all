@@ -1,4 +1,26 @@
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/*scroll mods*/  
+* {
+    box-sizing: border-box;
+}
 body {
     padding: 0;
     margin: 0;
@@ -83,6 +105,7 @@ header {
                     width: 50px;
                 }
                     .account {
+                        cursor: pointer;
                         width: 80%;
                         height: 80%;
                         transition: 1s;
@@ -170,13 +193,13 @@ header {
     display: block;
 }
 section {
-    height: auto;
+    height: auto;   
 }
     .section-container {
-        min-height: 600px;
         position: relative;
         display: flex;
-            justify-content: center;
+            align-items: center;
+            flex-direction: column;
     }
         .home-container {
             overflow-y: hidden;
@@ -278,29 +301,40 @@ section {
                         text-align: center;
                     }
         .ac .section-container .about-container .about-about .about-image-container, 
-        .ac .section-container .about-container .about-about .about-word-container{
+        .ac .section-container .about-container .about-about .about-word-container, 
+        .ac .section-container .about-container .about-about .about-image-container .about-image-area .about-img,
+        .ac .section-container .about-container .about-about .about-word-container .about-big-word,
+        .ac .section-container .about-container .about-about .about-word-container .about-small-word
+        {
             transform: translateX(0);
         }
-            .ac .section-container .about-container .about-about .about-image-container .about-image-area .about-img{
-                transform: translateX(0);
-            }
                 .ab .section-container .about-container .about-about .about-image-container .about-image-area .o1{
                     transform: translateY(-50px);
                 }
                 .ab .section-container .about-container .about-about .about-image-container .about-image-area .o2 {
                     transform: translateY(50px);
                 }
-            .ac .section-container .about-container .about-about .about-word-container .about-big-word,
-            .ac .section-container .about-container .about-about .about-word-container .about-small-word {
-                transform: translateX(0);
-            }
         .view-container {
+            height: 600px;
             overflow-y: hidden;
+            position: relative;
             display: flex;
                 align-items: center;
                 justify-content: space-evenly;
+        
         }
+            .view-title {
+                overflow-y: hidden;
+            }
+                .view-indicator {
+                    text-align: center;
+                    color: #104400;
+                    font-size: 2.5vw;
+                    transform: translateY(-1000%);
+                }
             .view-icon-container {
+                cursor: pointer;
+                transition: .5s;
                 width: 350px;
                 height: 80%;
                 display: flex;
@@ -308,6 +342,31 @@ section {
                     justify-content: space-around;
                     flex-direction: column;
             }
+                .view-icon-container:hover {
+                    transform: translateY(-50px);
+                    transition: .5s;
+                    border-radius: 50px;
+                    background-color:#184e08c5;
+                    border-bottom-style: solid;
+                    border-bottom-color: #5cda36;
+                    border-bottom-width: 10px;
+                }
+                    .view-icon-container:hover .view-info .view-info-subtext {
+                        transition: .5s;
+                        color: white;
+                    }
+                    .view-icon-container:hover .view-info .view-info-title {
+                        transition: .5s;
+                        text-shadow:
+                            0 0 7px #fff,
+                            0 0 10px #fff,
+                            0 0 21px #fff,
+                            0 0 42px #0fa,
+                            0 0 82px #0fa,
+                            0 0 92px #0fa,
+                            0 0 102px #0fa,
+                            0 0 151px #0fa;
+                    }
                 .view-icon {
                     transform: translateY(-1000%);
                     height: 250px;
@@ -329,6 +388,10 @@ section {
                     transform: translateY(-1000%);
                     height: 30%;
                     width: 100%;
+                    display: flex;
+                        flex-direction: column;
+                        gap:10px;
+                        align-items: center;
                 }
                     .view-info-title {
                         text-align: center;
@@ -336,10 +399,110 @@ section {
                         font-size: 2vw;
                     }
                     .view-info-subtext {
+                        width: 80%;
+                        transition: .5s;
                         text-align: center;
                     }
-        .ac .section-container .view-container .view-icon-container .view-icon, .ac .section-container .view-container .view-icon-container .view-info {
+        .ac .section-container .view-title .view-indicator,
+        .ac .section-container .view-container .view-icon-container .view-icon, 
+        .ac .section-container .view-container .view-icon-container .view-info {
             transform: translateY(0);
         }
+            /*view lessons here hehe*/
+            .sets {
+                transition: 2s;
+                display: none;
+            }
+            .selected-icon {
+                transform: translateY(-500%);
+                transition: 1s;
+                border-radius: 50px;
+                background-color:#184e08c5;
+                border-bottom-style: solid;
+                border-bottom-color: #5cda36;
+                border-bottom-width: 10px;
+            }
+                .selected-icon .view-info .view-info-subtext {
+                    transition: .5s;
+                    color: white;
+                }
+                .selected-icon .view-info .view-info-title {
+                    transition: .5s;
+                    text-shadow:
+                        0 0 7px #fff,
+                        0 0 10px #fff,
+                        0 0 21px #fff,
+                        0 0 42px #0fa,
+                        0 0 82px #0fa,
+                        0 0 92px #0fa,
+                        0 0 102px #0fa,
+                        0 0 151px #0fa;
+                }
+        .ac .section-container .selected-icon,
+        .ac .section-container .view-icon-back
+        {
+            transform: translateY(0);
+        }
+                .view-icon-back {
+                    transform: translateY(-1000%);
+                    transition: 5s;
+                    background-image: url(rotate-right.png);
+                    background-position: center;
+                    background-size: cover;
+                    border: 50%;
+                    width: 80px;
+                    height: 80px;
+                    position: absolute;
+                    right: 50px;
+                    bottom: 50px;
+                }
+            .view-intel-container {
+                overflow-x: hidden;
+            }
+                .view-article-input {
+                    display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    min-height: 1000px;
+                }
+                [data-protocol] {
+                    display: none;
+                }
+                .selected[data-protocol]{
+                    display: block;
+                }
+                    .view-article-container {
+                        transform: translateX(1000%);
+                        display: flex;
+                        gap: 20px;
+                            flex-direction: column;
+                    }
+                        .view-article-title {
+                            font-size: 3vw;
+                            font-weight:200;
+                            color: #104400;
+                            padding-left: 14%;
+                            padding-bottom: 5%;
+                        }
+                            .view-article-contents {
+                                height: 360px;
+                                width: 100%;
+                                display: flex;
+                                gap: 20px;
+                                    justify-content: center;
+                            }
+                                .view-article-subtext {
+                                    text-align: center;
+                                    font-size: 1.5vw;
+                                    width: 350px;
+                                }
+                                .vframe {
+                                    width: 500px;
+                                    height: 250px;
+                                }
 
+                .ac .section-container .view-intel-container .view-article-input .view-article-container
+                {
+                    transform: translateX(0);
+                }
 

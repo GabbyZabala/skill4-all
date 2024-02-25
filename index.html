@@ -70,19 +70,24 @@
     </section>
     <section data-tab-content id="view-all">
         <div class="section-container">
+            <div class="view-title barrier" id="view-title">
+                <div class="view-indicator one">
+                    CHOOSE WHICH ONE YOU WANT TO DO
+                </div>
+            </div>
             <div class="view-container barrier">
-                <div class="view-icon-container">
+                <div class="view-icon-container" data-icon-protocol="#tutorial" id="icon1">
                     <div class="view-icon ico1 one"></div>
                     <div class="view-info two">
                         <div class="view-info-title">
                             Tutorials
                         </div>
                         <div class="view-info-subtext">
-                            Step by step guide to build your knowledge
+                            Step-by-step guide to build your knowledge
                         </div> 
                     </div>
                 </div>
-                <div class="view-icon-container">
+                <div class="view-icon-container" data-icon-protocol="#technique" id="icon2">
                     <div class="view-icon ico2 two"></div>
                     <div class="view-info three">
                         <div class="view-info-title">
@@ -93,7 +98,7 @@
                         </div> 
                     </div>
                 </div>
-                <div class="view-icon-container">
+                <div class="view-icon-container" data-icon-protocol="#example" id="icon3">
                     <div class="view-icon ico3 three"></div>
                     <div class="view-info four">
                         <div class="view-info-title">
@@ -103,6 +108,64 @@
                             Interactive bone-bone examples demonstrating code in action
                         </div> 
                     </div>
+                </div>
+                <div class="view-icon-back sets" id="view-reset" onclick="resetView()"></div>
+            </div>
+            <div class="view-intel-container barrier sets" id="intel-container">
+                <div class="view-article-input " data-protocol id="tutorial">
+                    <div class="view-article-container one">
+                        <div class="view-article-title one">
+                            HyperText Markup Language (HTML)
+                        </div>
+                        <div class="view-article-contents two">
+                            <div class="view-article-subtext">
+                                is the basic scripting language use by web browsers to render pages on the world wide web. 
+                                HypeText allows a user to click a link and be redirect to a new page referenced by that link
+                            </div>
+                            <iframe class="vframe" src="https://drive.google.com/file/d/1rTspu6WVa9b9pczHh-rd3IlH_emcJs9y/preview"></iframe>
+                        </div>
+                        <div class="view-article-container two">
+                            <div class="view-article-title two">
+                                Cascading Style Sheet (CSS) 
+                            </div>
+                            <div class="view-article-contents three">
+                                <div class="view-article-subtext">
+                                    is a computer language for
+                                    laying out structuring 
+                                    webpages ( HTML or XML).
+                                    This language contains 
+                                    coding elements and is
+                                    composed of these
+                                    "cascading style sheet"
+                                    which are equally called
+                                    CSS files
+                                </div>
+                                <iframe class="vframe" src="https://drive.google.com/file/d/1url8px1-OhV5yR_SUefEFIe00W-WS1bd/preview" ></iframe>
+                            </div>
+                        </div>
+                        <div class="view-article-container three">
+                            <div class="view-article-title three">
+                                JavaScript (JS)
+                            </div>
+                            <div class="view-article-contents four">
+                                <div class="view-article-subtext">
+                                    Is a scripting language that 
+                                    enables you to create 
+                                    dynamically updating 
+                                    content, control multimedia, 
+                                    animate images, and pretty 
+                                    much everything else.    
+                                </div>
+                                <iframe class="vframe" src="https://drive.google.com/file/d/1M1oENuO2gnzmjEkjn0qnprGNRh5IghTY/preview"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-article-input " data-protocol id="technique">
+                    a
+                </div>
+                <div class="view-article-input" data-protocol id="example">
+                    l
                 </div>
             </div>
         </div>
