@@ -90,6 +90,7 @@ var dropdown = document.getElementById("dropdown");
 var accountLine = document.getElementById("account-line");
 var profilePic = document.getElementById("profile-pic");
     function toggleDropdown() {
+        dropdown.classList.remove('sets')
         dropdown.classList.toggle("showshit");
         accountLine.classList.toggle("bline");
         profilePic.classList.toggle("blank");
@@ -98,6 +99,9 @@ var profilePic = document.getElementById("profile-pic");
             dropdown.classList.remove('showshit');
             accountLine.classList.remove('bline');
             profilePic.classList.remove('blank')
+            setTimeout(() => {
+                dropdown.classList.add('sets') 
+            }, 300);
         }
 var intel = document.getElementById("intel-container");
 var vtitle = document.getElementById("view-title");
