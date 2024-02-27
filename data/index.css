@@ -536,6 +536,9 @@ section {
 @media only screen and (max-width: 600px) { /*Phone view*/
     .pc {display: none;}
     .cp {display: block;}
+    .barrier-cp {
+        overflow-x: hidden;
+    }    
     header {
         height: 60px;
     }
@@ -646,7 +649,7 @@ section {
                 background-color: rgba(250,248,240,1);
                 border-radius: 50px;
                 transition: .5s;
-                width: 350px;
+                width: 325px;
                 height: auto;
                 flex-direction: row;
             }
