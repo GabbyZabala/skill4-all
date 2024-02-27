@@ -14,17 +14,25 @@
             <div class="logo" onclick="returnToHome()"></div>
             <div class="tabs-container">
                 <div class="tabs">
-                    <li data-tab-target="#home" class="tab active" onclick="bghome()">HOME</li>
-                    <li data-tab-target="#about" class="tab" onclick="bgabout()">ABOUT</li>
-                    <li data-tab-target="#view-all" class="tab" onclick="bgview()">VIEW ALL LESSONS</li>
+                    <li data-tab-target="#home" class="pc tab active" onclick="bghome()">HOME</li>
+                    <li data-tab-target="#about" class="pc tab" onclick="bgabout()">ABOUT</li>
+                    <li data-tab-target="#view-all" class="pc tab" onclick="bgview()">VIEW ALL LESSONS</li>
+                    <div class="cp account-image-container" onclick="gotoprofile()" id="da-profile">
+                        <div class="profile-pic"></div>
+                    </div>
                 </div>
                 <div class="account-container">
                     <div class="account-img" onclick="toggleDropdown()" id="account-line">
                         <div class="account" id="profile-pic"></div>
                     </div>
                     <div class="account-pop_out" id="dropdown">
-                        <li data-tab-target="#profile" class="pop-tags one" onclick="resetDropdown()">PROFILE</li>
-                        <li data-tab-target="#logs" class="pop-tags two"onclick="resetDropdown()">SIGN-IN</li>
+                        <li data-tab-target="#home" class="cp pop-tags one" onclick="bghome();resetDropdown()">HOME</li>
+                        <li data-tab-target="#about" class="cp pop-tags two " onclick="bgabout();resetDropdown()">ABOUT</li>
+                        <li data-tab-target="#view-all" class="cp pop-tags thr" onclick="bgview();resetDropdown()">VIEW LESSONS</li>
+                        <li data-tab-target="#profile" class="cp pop-tags fou" onclick="resetDropdown()">PROFILE</li>
+                        <li data-tab-target="#logs" class="cp pop-tags fiv"onclick="resetDropdown()">SIGN-IN</li>
+                        <li data-tab-target="#profile" class="pc pop-tags one" onclick="resetDropdown()">PROFILE</li>
+                        <li data-tab-target="#logs" class="pc pop-tags two"onclick="resetDropdown()">SIGN-IN</li>
                     </div>
                 </div>
             </div>
@@ -57,8 +65,9 @@
                         </div>
                     </div>
                     <div class="about-word-container one">
-                        <div class="about-big-word one">SKILL</div>
-                        <div class="about-big-word two">LEARN</div>
+                        <div class="about-big-word cp one">SKILL LEARN</div>
+                        <div class="about-big-word pc one">SKILL</div>
+                        <div class="about-big-word pc two">LEARN</div>
                         <div class="about-small-word three">
                             This website will help you to improve your horizone of knowledge
                             and learn more about basic HTML, CSS, and JavaScript. <br>
@@ -225,7 +234,7 @@
     </section>
     <section data-tab-content id="profile">
         <div class="section-container">
-
+            profile.exe
         </div>
     </section>
 </body>

@@ -38,6 +38,7 @@ var bg = document.getElementById("body");
     tabs.forEach(tab => {
         tab.addEventListener('click', () => handleTabClick(tab))
     })
+    // mobile version
 
     function returnToHome() {
         const homeTab = document.querySelector('[data-tab-target="#home"]');
@@ -62,6 +63,28 @@ var bg = document.getElementById("body");
         }, 400);
         bg.className = "";
         bg.classList.add("home");
+    }
+    function gotoprofile() {
+        const profileTab = document.querySelector('[data-tab-target="#profile"]');
+        const profileSection = document.querySelector('#profile');
+        tabs.forEach(tab => {
+            tab.classList.remove('active');
+        });
+        tabContents.forEach(tabContent => {
+            tabContent.classList.remove('ac');
+            tabContent.classList.remove('ab');
+            setTimeout(() => {
+                tabContent.classList.remove('active');
+            }, 300);
+        });
+        
+        setTimeout(() => {
+            profileTab.classList.add('active');
+            profileSection.classList.add('active');
+        }, 300);
+        setTimeout(() => {
+            profileSection.classList.add('ac'); 
+        }, 400);
     }
 var dropdown = document.getElementById("dropdown");
 var accountLine = document.getElementById("account-line");
@@ -123,8 +146,10 @@ function viewChoice(view) {
     vicon.forEach(icon => {
         if (icon !== view) {
             icon.classList.add('sets');
+            icon.classList.add('pc');
             icon.classList.remove('selected-icon');
         } else {
+            icon.classList.remove('pc');
             icon.classList.remove('sets');
             icon.classList.add('selected-icon');
         }
