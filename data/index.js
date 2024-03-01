@@ -90,7 +90,7 @@ var dropdown = document.getElementById("dropdown");
 var accountLine = document.getElementById("account-line");
 var profilePic = document.getElementById("profile-pic");
     function toggleDropdown() {
-        dropdown.classList.remove('sets')
+        dropdown.classList.toggle('sets')
         dropdown.classList.toggle("showshit");
         accountLine.classList.toggle("bline");
         profilePic.classList.toggle("blank");
