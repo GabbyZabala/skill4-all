@@ -90,10 +90,28 @@ var dropdown = document.getElementById("dropdown");
 var accountLine = document.getElementById("account-line");
 var profilePic = document.getElementById("profile-pic");
     function toggleDropdown() {
-        dropdown.classList.toggle('sets')
-        dropdown.classList.toggle("showshit");
+        
         accountLine.classList.toggle("bline");
         profilePic.classList.toggle("blank");
+        if(dropdown.classList.contains('sets')){
+            setTimeout(() => {
+                dropdown.classList.remove('sets')
+            }, 100);
+        } else {
+            setTimeout(() => {
+                dropdown.classList.add('sets')
+            }, 300);
+        }    
+        if(!dropdown.classList.contains('showshit')){
+            setTimeout(() => {
+                dropdown.classList.add("showshit");
+            }, 200);
+        }
+        else {
+            setTimeout(() => {
+                dropdown.classList.remove("showshit");
+            }, 200);
+        }
     }
         function resetDropdown() {
             dropdown.classList.remove('showshit');
@@ -101,7 +119,7 @@ var profilePic = document.getElementById("profile-pic");
             profilePic.classList.remove('blank')
             setTimeout(() => {
                 dropdown.classList.add('sets') 
-            }, 300);
+            }, 200);
         }
 var intel = document.getElementById("intel-container");
 var vtitle = document.getElementById("view-title");
