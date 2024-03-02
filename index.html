@@ -30,9 +30,9 @@
                         <li data-tab-target="#about" class="cp pop-tags twe " onclick="bgabout();resetDropdown()">ABOUT</li>
                         <li data-tab-target="#view-all" class="cp pop-tags thr" onclick="bgview();resetDropdown()">VIEW LESSONS</li>
                         <li data-tab-target="#profile" class="cp pop-tags fou" onclick="resetDropdown()">PROFILE</li>
-                        <li data-tab-target="#logs" class="cp pop-tags fiv"onclick="resetDropdown()">SIGN-IN</li>
+                        <li data-tab-target="#logs" class="cp pop-tags fiv"onclick="bgloggs();resetDropdown()">SIGN-IN</li>
                         <li data-tab-target="#profile" class="pc pop-tags one" onclick="resetDropdown()">PROFILE</li>
-                        <li data-tab-target="#logs" class="pc pop-tags two"onclick="resetDropdown()">SIGN-IN</li>
+                        <li data-tab-target="#logs" class="pc pop-tags two"onclick="bgloggs();resetDropdown()">SIGN-IN</li>
                     </div>
                 </div>
             </div>
@@ -239,7 +239,37 @@
     </section>
     <section data-tab-content id="logs">
         <div class="section-container">
-            Sign.exe
+            <div class="sign-log-container barrier">
+                <form class="sign-box-container one">
+                    <div class="sign-logo-container"></div>
+                    <div class="sign-top-container">
+                        <div class="sign-button-container">
+                            <div class="sign-bottom-pic sign-one">.</div>
+                            <input type="text" placeholder="Username" name="uname" required class="sign-button-real">
+                        </div>
+                        <div class="sign-button-container">
+                            <div class="sign-bottom-pic sign-two">.</div>
+                            <input type="password" placeholder="Password" name="psw" required class="sign-button-real">
+                        </div>
+                        <div class="sign-submit-container">
+                            <span>Forgot Password?</span>
+                            <button class="sign-submit" type="submit">Login</button>
+                        </div>
+                    </div>
+                    <div class="sign-divider-container">
+                        <div class="sign-line">.</div>
+                        <div class="sign-or">OR</div>
+                        <div class="sign-line">.</div>
+                    </div>
+                    <div class="sign-bottom-container">
+                        <div class="sign-bottom-icon-container">
+                            <div title="Log In using Facebook" class="sign-bottom-ico sign-logs-one"></div>
+                            <div title="Log In using Pinterest" class="sign-bottom-ico sign-logs-two"></div>
+                            <div title="Log In using Google" class="sign-bottom-ico sign-logs-thr"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 </body>

@@ -65,6 +65,21 @@ body {
         background-position-x: right;
         transition: 1s;
     }
+    .sgn_up {
+        transition: 1s;
+        animation: smooth_bg 7s linear infinite alternate both;
+    }
+        @keyframes smooth_bg{
+            0%{
+                background-position-x: left;
+            }
+            50%{
+                background-position-x: center;
+            }
+            100%{
+                background-position-x: right;
+            }
+        }
 .barrier {
     max-width: 1250px;
     width: 100%;
@@ -535,6 +550,161 @@ section {
                         border-color: black;
                         border-width: 2px;
                     }
+    /*Sign in and out section*/
+        .sign-log-container {
+            overflow-y: hidden;
+            display: flex;
+                justify-content: center;
+        }
+        .ac .section-container .sign-box-container {
+            transform: 1s;
+            transform: translateY(0);
+        }
+            .sign-box-container {
+                transform: translateY(500%);
+                height: 650px;
+                max-width: 425px;
+                width: 100%;
+                background-color: rgba(197,214,131,1);
+                border-radius: 40px;
+                border-top-color: rgba(250,248,240,1);
+                border-right-color: rgba(250,248,240,1);
+                border-left-color: rgba(227,240,182,1);
+                border-bottom-color: rgba(227,240,182,1);
+                border-style: solid;
+                border-width: 10px;
+                display: flex;
+                    gap: 10px;
+                    flex-direction: column;
+                    align-items: center;
+            }
+                .sign-logo-container {
+                    width: 200px;
+                    height: 150px;
+                    background-image: url(logo.png);
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                } 
+                .sign-top-container {
+                    height: auto;
+                    width: 90%;
+                    display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        align-items: center;
+                }   
+                    .sign-button-container {
+                        height: 60px;
+                        width: 80%;
+                        background-color: beige;
+                        padding: 15px;
+                        border-radius: 50px;
+                        display: flex;
+                            gap: 10px;
+                            align-items: center;
+                    }
+                        .sign-bottom-pic {
+                            height: 30px;
+                            width: 30px;
+                            padding: 5px;
+                            transform: translateX(5px);
+                            transform: translateY(-2px);
+                        }
+                            .sign-one {
+                                background: url(username.png);
+                                background-position: center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                            }
+                            .sign-two {
+                                background: url(lock.png);
+                                background-position: center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                            }
+                        .sign-button-real {
+                            flex-grow: 1;
+                            height: 100%;
+                            background-color: transparent;
+                            border: none;
+                            text-align: left;
+                            border-bottom: solid 2px rgba(197,214,131,1);
+                            padding-left: 15px;
+                            padding-right: 10px;
+                            transform: translateX(-10px);
+                        }
+                            .sign-button-real:active, .sign-button-real:focus, .sign-button-real:hover {
+                                outline: none;
+                                border-bottom: solid 2px rgba(197,214,131,1);
+                            }
+                        .sign-submit-container {
+                            height: 50px;
+                            width: 70%;
+                            display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                        }
+                            .sign-submit {
+                                padding: 10px 25px 10px 25px;
+                                background-color: rgba(227,240,182,1);
+                                border-radius: 50px;
+                                border: none;
+                            }
+                .sign-divider-container {
+                    width: 100%;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                }
+                    .sign-or {
+                        text-align: center;
+                        width: 15%;
+                        padding: 10px;
+                    }
+                    .sign-line {
+                        height: 1px;
+                        transform: translateY(-50%);
+                        width: 35%;
+                        border-bottom-style: solid;
+                        border-bottom-width: 5px;
+                    }
+                .sign-bottom-container {
+                    width: 100%;
+                    display: flex;
+                        justify-content: center;
+                }
+                    .sign-bottom-icon-container {
+                        width: 50%;
+                        display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                    }
+                        .sign-bottom-ico {
+                            height: 45px;
+                            width: 45px;
+                            border-radius: 50%;
+                            border: solid 2px black;
+                        }
+                            .sign-logs-one {
+                                background: url(facebook.png);
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                background-position: center;
+                            }
+                            .sign-logs-two {
+                                background: url(pinterest.jpg);
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                background-position: center;
+                            }
+                            .sign-logs-thr {
+                                background: url(google.webp);
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                background-position: center;
+                            }
+    /*Sign in and out section*/
 @media only screen and (max-width: 600px) { /*Phone view*/
     .pc {display: none;}
     .cp {display: block;}
@@ -856,7 +1026,7 @@ section {
                     transition: .5s;
                     text-align: center;
                 } 
-}
-@media only screen and (min-width: 901px) {
-    .cp {display: none;}
-}
+    }
+    @media only screen and (min-width: 901px) {
+        .cp {display: none;}
+    }

@@ -96,21 +96,21 @@ var profilePic = document.getElementById("profile-pic");
         if(dropdown.classList.contains('sets')){
             setTimeout(() => {
                 dropdown.classList.remove('sets')
-            }, 100);
+            }, 50);
         } else {
             setTimeout(() => {
                 dropdown.classList.add('sets')
-            }, 300);
+            }, 150);
         }    
         if(!dropdown.classList.contains('showshit')){
             setTimeout(() => {
                 dropdown.classList.add("showshit");
-            }, 200);
+            }, 100);
         }
         else {
             setTimeout(() => {
                 dropdown.classList.remove("showshit");
-            }, 200);
+            }, 100);
         }
     }
         function resetDropdown() {
@@ -150,6 +150,16 @@ var icon3 = document.getElementById('icon3');
     function bgview() {
         bg.className = "";
         bg.classList.add('view');
+        intel.classList.add('sets');
+        vtitle.classList.remove('sets');
+        vback.classList.add('sets');
+        icon1.className = "view-icon-container";
+        icon2.className = "view-icon-container";
+        icon3.className = "view-icon-container";
+    }
+    function bgloggs() {
+        bg.className = "";
+        bg.classList.add("sgn_up");
         intel.classList.add('sets');
         vtitle.classList.remove('sets');
         vback.classList.add('sets');
