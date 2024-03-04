@@ -246,20 +246,40 @@
                     </div>
                 </div>
                 <div class="profile-functions-container">
-                    <div class="profile-tagger" id="activity-head">
+                    <div class="profile-tagger an-right" id="activity-head">
                         <div class="profile-function-ico-head">
                             <div class="profile-head-ico-top-container">
                                 <div class="profile-head-ico marks"></div>
                                 <div class="profile-head-inbox">My Activity</div>
                                 <div class="profile-head-ico-count">[ 0 ]</div>
                             </div>
-                            <div class="profile-head-ico-down-container" onclick="togglecurrentActivity()">
+                            <div class=" pc profile-head-ico-down-container" onclick="togglecurrentActivity()">
                                 <div class="profile-head-down">Try What you have learned here!</div>
                                 <div class="profile-head-cross" id="rotate"></div>
                             </div>
+                            <div class="cp profile-ico-cross" id="rotate-cp" onclick="togglecurrentActivity_CP()"></div>
                         </div>
                     </div>
-                    <div class="profile-tagger sets" id="activity-body">
+                    <div class="cp">
+                        <div class="profile-tagger an-right sets" id="activity-body-cp">
+                            <div class="profile-function-ico-body">
+                                <div class="profile-function-box">
+                                    <div class="function-ico"></div>
+                                    <div class="function-title">Activity Name</div>
+                                </div>
+                                <div class="profile-function-box">
+                                    <div class="function-ico"></div>
+                                    <div class="function-title">Activity Name</div>
+                                </div>
+                                <div class="profile-function-box">
+                                    <div class="function-ico"></div>
+                                    <div class="function-title">Activity Name</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="pc profile-tagger an-right sets" id="activity-body">
                         <div class="profile-function-ico-body">
                             <div class="profile-function-box">
                                 <div class="function-ico"></div>
@@ -275,7 +295,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="profile-tagger sets" id="lesson-body">
+                    <div class="pc profile-tagger an-left sets" id="lesson-body">
                         <div class="profile-function-ico-body">
                             <div class="profile-function-box">
                                 <div class="function-ico"></div>
@@ -291,16 +311,36 @@
                             </div>
                         </div>
                     </div>
-                    <div class="profile-tagger" id="lesson-head" gidden>
+                    <div class="profile-tagger an-left" id="lesson-head">
                         <div class="profile-function-ico-head">
                             <div class="profile-head-ico-top-container">
                                 <div class="profile-head-ico book"></div>
                                 <div class="profile-head-inbox">Bookmarks</div>
                                 <div class="profile-head-ico-count">[ 0 ]</div>
                             </div>
-                            <div class="profile-head-ico-down-container" onclick="togglecurrentLesson()">
+                            <div class="pc profile-head-ico-down-container" onclick="togglecurrentLesson()">
                                 <div class="profile-head-down">Remember where you left!</div>
                                 <div class="profile-head-cross" id="rotata"></div>
+                            </div>
+                            <div class="cp profile-ico-cross" id="rotata-cp" onclick="togglecurrentLesson_CP()"></div>
+                        </div>
+                    </div>
+                    <div class="cp"> 
+                        
+                        <div class="profile-tagger an-left sets" id="lesson-body-cp">
+                            <div class="profile-function-ico-body">
+                                <div class="profile-function-box">
+                                    <div class="function-ico"></div>
+                                    <div class="function-title">Topic Name</div>
+                                </div>
+                                <div class="profile-function-box">
+                                    <div class="function-ico"></div>
+                                    <div class="function-title">Topic Name</div>
+                                </div>
+                                <div class="profile-function-box">
+                                    <div class="function-ico"></div>
+                                    <div class="function-title">Topic Name</div>
+                                </div>
                             </div>
                         </div>
                     </div>

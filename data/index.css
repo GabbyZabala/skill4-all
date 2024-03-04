@@ -231,7 +231,8 @@ header {
     display: block;
 }
 section {
-    height: auto;   
+    height: auto;
+    overflow-x: hidden;   
 }
     .section-container {
         position: relative;
@@ -868,12 +869,44 @@ section {
             .profile-function-ico-body {
                 background-color: rgba(227,240,182,1);
                 height: 300px;
-                width: 600px;
+                min-width: 600px;
+                width: 100%;
                 padding: 20px 20px 0 20px;
                 display: flex;
                     flex-direction: column;
                     gap: 10px;
             }
+                .an-right {
+                    animation: roll-in-blurred-right 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+                }
+                    @keyframes roll-in-blurred-right {
+                        0% {
+                        transform: translateX(1000px);
+                        filter: blur(50px);
+                        opacity: 0;
+                        }
+                        100% {
+                        transform: translateX(0);
+                        filter: blur(0);
+                        opacity: 1;
+                        }
+                    }
+                .an-left {
+                    animation: roll-in-blurred-left 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+                }
+                    @keyframes roll-in-blurred-left {
+                        0% {
+                            transform: translateX(-1000px);
+                            filter: blur(50px);
+                            opacity: 0;
+                        }
+                        100% {
+                            transform: translateX(0);
+                            filter: blur(0);
+                            opacity: 1;
+                        }
+                  }
+                  
                 .profile-function-box {
                     cursor: pointer;
                     height: 50px;
@@ -1125,6 +1158,78 @@ section {
             height: 20px;
             width: 20px;
         }
+        .profile-action-container {
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: left;
+        }
+            .profile-pic-circle {
+                height: 100px;
+                width: 100px;
+            }
+            .profile-name-box {
+                transform: translateY(-20px);
+                font-size: 30px;
+            }
+        .profile-edit-location {
+            padding-top: 0;
+            padding-bottom: 20px;
+            display: flex;
+                justify-content: flex-start;
+        }
+        .profile-functions-container {
+            padding-top: 20px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+                justify-content: space-evenly;
+                align-content: center;
+                gap: 5px;
+        }
+            .profile-function-ico-head {
+                height: auto;
+                width: 250px;
+                display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+            }
+                .profile-ico-cross {
+                    transition: 1s;
+                    padding: 15px;
+                    background-image: url(plus.png);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            .profile-function-ico-body {
+                padding: 20px 20px 0 20px;
+            }                  
+                .profile-function-box {
+                    cursor: pointer;
+                    height: 50px;
+                    width: auto;
+                    padding-left: 20px;
+                    background-color: rgba(250,248,240,1);
+                    display: flex;
+                        align-items: center;
+                    overflow-x: hidden;
+                    transition: 1s;
+                }
+                    .profile-function-box:hover {
+                        transition: 1s;
+                        transform: translateX(30px);
+                    }
+                    .function-ico {
+                        height: 40px;
+                        width: 40px;
+                        background-image: url(list.png);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .function-title {
+                        padding-left: 20px;
+                    }    
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px) { /*Tablet view*/

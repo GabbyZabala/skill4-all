@@ -243,20 +243,32 @@ function topFunction() {
 
 var activity_Head = document.getElementById('activity-head');
 var activity_Body = document.getElementById('activity-body');
+var activity_Body_CP = document.getElementById('activity-body-cp');
 var lesson_Head = document.getElementById('lesson-head');
 var lesson_Body = document.getElementById('lesson-body');
+var lesson_Body_CP = document.getElementById('lesson-body-cp');
 var profile_Section = document.getElementById('profile');
 var crossL = document.getElementById('rotate');
+var crossLCP = document.getElementById('rotate-cp');
 var crossR = document.getElementById('rotata');
+var crossRCP = document.getElementById('rotata-cp');
     function togglecurrentActivity() {
         activity_Body.classList.toggle('sets');
         lesson_Body.classList.add('sets');
         lesson_Head.classList.toggle('sets');
         crossL.classList.toggle('tilt-left');
     }
+        function togglecurrentActivity_CP() {
+            activity_Body_CP.classList.toggle('sets');
+            crossLCP.classList.toggle('tilt-left');
+        }
     function togglecurrentLesson() {
         lesson_Body.classList.toggle('sets');
         activity_Body.classList.add('sets');
         activity_Head.classList.toggle('sets');
         crossR.classList.toggle('tilt-right');
     }
+        function togglecurrentLesson_CP() {
+            lesson_Body_CP.classList.toggle('sets');
+            crossRCP.classList.toggle('tilt-right');
+        }
