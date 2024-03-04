@@ -17,7 +17,7 @@
                     <li data-tab-target="#home" class="pc tab active" onclick="bghome()">HOME</li>
                     <li data-tab-target="#about" class="pc tab" onclick="bgabout()">ABOUT</li>
                     <li data-tab-target="#view-all" class="pc tab" onclick="bgview()">VIEW ALL LESSONS</li>
-                    <div class="cp account-img account-image-container" onclick="gotoprofile()" id="da-profile">
+                    <div class="cp account-img account-image-container" onclick="bgview();gotoprofile()" id="da-profile">
                         <div class="profile-pic"></div>
                     </div>
                 </div>
@@ -29,9 +29,9 @@
                         <li data-tab-target="#home" class="cp pop-tags uno" onclick="bghome();resetDropdown()">HOME</li>
                         <li data-tab-target="#about" class="cp pop-tags twe " onclick="bgabout();resetDropdown()">ABOUT</li>
                         <li data-tab-target="#view-all" class="cp pop-tags thr" onclick="bgview();resetDropdown()">VIEW LESSONS</li>
-                        <li data-tab-target="#profile" class="cp pop-tags fou" onclick="resetDropdown()">PROFILE</li>
+                        <li data-tab-target="#profile" class="cp pop-tags fou" onclick="bgview();resetDropdown()">PROFILE</li>
                         <li data-tab-target="#logs" class="cp pop-tags fiv"onclick="bgloggs();resetDropdown()">SIGN-IN</li>
-                        <li data-tab-target="#profile" class="pc pop-tags one" onclick="resetDropdown()">PROFILE</li>
+                        <li data-tab-target="#profile" class="pc pop-tags one" onclick="bgview();resetDropdown()">PROFILE</li>
                         <li data-tab-target="#logs" class="pc pop-tags two"onclick="bgloggs();resetDropdown()">SIGN-IN</li>
                     </div>
                 </div>
@@ -234,7 +234,78 @@
     </section>
     <section data-tab-content id="profile">
         <div class="section-container">
-            profile.exe
+            <div class="profile-containter barrier">
+                <div class="profile-action-container">
+                    <div class="profile-pic-circle"></div>
+                    <div class="profile-name-box">USERNAME</div>
+                </div>
+                <div class="profile-edit-location">
+                    <div class="profile-edit-buttom">
+                        <div class="profile-edit-icon"></div>
+                        <div class="profile-edit-textbox">Edit Profile</div>
+                    </div>
+                </div>
+                <div class="profile-functions-container">
+                    <div class="profile-tagger" id="activity-head">
+                        <div class="profile-function-ico-head">
+                            <div class="profile-head-ico-top-container">
+                                <div class="profile-head-ico marks"></div>
+                                <div class="profile-head-inbox">My Activity</div>
+                                <div class="profile-head-ico-count">[ 0 ]</div>
+                            </div>
+                            <div class="profile-head-ico-down-container" onclick="togglecurrentActivity()">
+                                <div class="profile-head-down">Try What you have learned here!</div>
+                                <div class="profile-head-cross" id="rotate"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-tagger sets" id="activity-body">
+                        <div class="profile-function-ico-body">
+                            <div class="profile-function-box">
+                                <div class="function-ico"></div>
+                                <div class="function-title">Activity Name</div>
+                            </div>
+                            <div class="profile-function-box">
+                                <div class="function-ico"></div>
+                                <div class="function-title">Activity Name</div>
+                            </div>
+                            <div class="profile-function-box">
+                                <div class="function-ico"></div>
+                                <div class="function-title">Activity Name</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-tagger sets" id="lesson-body">
+                        <div class="profile-function-ico-body">
+                            <div class="profile-function-box">
+                                <div class="function-ico"></div>
+                                <div class="function-title">Topic Name</div>
+                            </div>
+                            <div class="profile-function-box">
+                                <div class="function-ico"></div>
+                                <div class="function-title">Topic Name</div>
+                            </div>
+                            <div class="profile-function-box">
+                                <div class="function-ico"></div>
+                                <div class="function-title">Topic Name</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-tagger" id="lesson-head" gidden>
+                        <div class="profile-function-ico-head">
+                            <div class="profile-head-ico-top-container">
+                                <div class="profile-head-ico book"></div>
+                                <div class="profile-head-inbox">Bookmarks</div>
+                                <div class="profile-head-ico-count">[ 0 ]</div>
+                            </div>
+                            <div class="profile-head-ico-down-container" onclick="togglecurrentLesson()">
+                                <div class="profile-head-down">Remember where you left!</div>
+                                <div class="profile-head-cross" id="rotata"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section data-tab-content id="logs">
@@ -252,7 +323,7 @@
                             <input type="password" placeholder="Password" name="psw" required class="sign-button-real">
                         </div>
                         <div class="sign-submit-container">
-                            <span>Forgot Password?</span>
+                            <span class="sign-forgot">Forgot Password?</span>
                             <button class="sign-submit" type="submit">Login</button>
                         </div>
                     </div>

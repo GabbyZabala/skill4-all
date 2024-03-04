@@ -238,3 +238,25 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+//profile JS
+
+var activity_Head = document.getElementById('activity-head');
+var activity_Body = document.getElementById('activity-body');
+var lesson_Head = document.getElementById('lesson-head');
+var lesson_Body = document.getElementById('lesson-body');
+var profile_Section = document.getElementById('profile');
+var crossL = document.getElementById('rotate');
+var crossR = document.getElementById('rotata');
+    function togglecurrentActivity() {
+        activity_Body.classList.toggle('sets');
+        lesson_Body.classList.add('sets');
+        lesson_Head.classList.toggle('sets');
+        crossL.classList.toggle('tilt-left');
+    }
+    function togglecurrentLesson() {
+        lesson_Body.classList.toggle('sets');
+        activity_Body.classList.add('sets');
+        activity_Head.classList.toggle('sets');
+        crossR.classList.toggle('tilt-right');
+    }
