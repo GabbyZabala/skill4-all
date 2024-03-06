@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css?|Oswald");
+@import url('https://fonts.cdnfonts.com/css/choco-taste-trial');
 html {
     scroll-behavior: smooth;
+    font-family: 'Josefin Sans', sans-serif;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -265,6 +268,7 @@ section {
                 .home-title {
                     font-size: 3vw;
                     text-align: center;
+                    font-family: 'Choco Taste Trial', sans-serif;
                     color: #104400;
                     transform: translateY(1000%);
                 }
@@ -329,7 +333,6 @@ section {
                     .about-big-word {
                         transform: translateX(500%);
                         font-size: 100px;
-                        font-family: Arial, Helvetica, sans-serif;
                         font-weight: bolder;
                         color: #104400;
                     }
@@ -369,6 +372,7 @@ section {
                     text-align: center;
                     color: #104400;
                     font-size: 2.5vw;
+                    font-family: 'Choco Taste Trial', sans-serif;
                     transform: translateY(-1000%);
                 }
             .view-icon-container {
