@@ -54,7 +54,7 @@ body {
     transition: 1s;
     display: flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 60px;
 }
     .home {
         background-position-x: left;
@@ -1309,6 +1309,9 @@ section {
             transition: .5s;
             width: 200px;
             height: 60%;
+        }
+        .view-container:hover{
+            transform: translate(0);
         }
             .view-icon {
                 transform: translateY(-1000%);
